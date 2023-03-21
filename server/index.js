@@ -3,8 +3,8 @@ import * as dotenv from "dotenv";
 import cors from "cors";
 
 import connectDb from "./mongodb/connect.js";
-import postRoutes from "./mongodb/postRoutes.js";
-import dalleRoutes from "./mongodb/dalleRoutes.js";
+import postRoutes from "./routes/postRoutes.js";
+import dalleRoutes from "./routes/dalleRoutes.js";
 
 dotenv.config();
 
@@ -22,8 +22,8 @@ app.get("/", async (req, res) => {
 const startServer = async () => {
   try {
     connectDb(process.env.MONGODB_URL);
-    app.listen(8080, () => {
-      console.log("Server is running on port 8080");
+    app.listen(8181, () => {
+      console.log("Server is running on port 8181");
     });
   } catch (error) {
     console.log(error);

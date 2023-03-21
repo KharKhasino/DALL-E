@@ -97,7 +97,6 @@ const CreatePost = () => {
             type="text"
             name="prompt"
             placeholder="Magical Shining Torch"
-            value={form.name}
             handleChange={handleChange}
             isSurpriseMe
             handleSurpriseMe={handleSurpriseMe}
